@@ -7,3 +7,21 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+apple_varieties = [
+  "gala",
+  "empire",
+  "golden delicious",
+  "red delicious",
+  "fuji",
+  "cameo",
+]
+
+apple_varieties.each do |variety|
+  apple = Apple.new(
+    variety: variety,
+    color: ["red", "green", "yellow"].sample,
+    mass: rand(1..1000),  
+  )
+  apple.save
+
+end
